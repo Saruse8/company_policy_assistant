@@ -1,0 +1,16 @@
+question,expected_policy,method,answer,predicted_policy,policy_correct,response_time,input_tokens,output_tokens,total_tokens
+How often do I need to change my password?,Password Policy,Rules-based,Passwords must be changed every 90 days and meet complexity requirements.,Password Policy,True,0.0005461670225486159,0,0,0
+How often do I need to change my password?,Password Policy,LLM without vector index,Passwords must be changed every 90 days and meet complexity requirements.,Password Policy,True,1.3153102500364184,2885,34,2919
+How often do I need to change my password?,Password Policy,LLM with vector index,Passwords must be changed every 90 days.,Password Policy,True,1.755541999998968,219,30,249
+How frequently must I update my login credentials?,Password Policy,Rules-based,Accounts must be reviewed quarterly.,Account Management Policy,False,0.0016811660025268793,0,0,0
+How frequently must I update my login credentials?,Password Policy,LLM without vector index,Passwords must be changed every 90 days and meet complexity requirements.,Password Policy,True,2.8180447079939768,2884,34,2918
+How frequently must I update my login credentials?,Password Policy,LLM with vector index,Passwords must be changed every 90 days.,Password Policy,True,22.512842208030634,218,30,248
+Does the company provide free lunch every Friday?,None,Rules-based,Only approved software may be installed on company devices.,Software Installation Policy,False,0.001137249986641109,0,0,0
+Does the company provide free lunch every Friday?,None,LLM without vector index,The information regarding whether the company provides free lunch every Friday is not covered by the available policies.,None,True,2.8215339169837534,2884,38,2922
+Does the company provide free lunch every Friday?,None,LLM with vector index,The provided policies do not contain enough information to answer whether the company provides free lunch every Friday.,None,True,7.183149166987278,223,38,261
+How long is the probation period for new employees?,Probation Period Policy,Rules-based,New hires are subject to a 90-day probation period.,Probation Period Policy,True,0.001595500041730702,0,0,0
+How long is the probation period for new employees?,Probation Period Policy,LLM without vector index,New hires are subject to a 90-day probation period.,Probation Period Policy,True,1.3782412500004284,2885,36,2921
+How long is the probation period for new employees?,Probation Period Policy,LLM with vector index,The probation period for new employees is 90 days.,Probation Period Policy,True,1.4513666669954546,222,34,256
+How many vacation days do employees receive per year?,Vacation Policy,Rules-based,Employees receive 15 vacation days per year. Unused days may roll over.,Vacation Policy,True,0.0015301659586839378,0,0,0
+How many vacation days do employees receive per year?,Vacation Policy,LLM without vector index,"Employees receive 15 vacation days per year, and unused days may roll over.",Vacation Policy,True,8.538176125031896,2885,38,2923
+How many vacation days do employees receive per year?,Vacation Policy,LLM with vector index,Employees receive 15 vacation days per year.,Vacation Policy,True,9.541545249987394,228,31,259
