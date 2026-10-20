@@ -338,26 +338,12 @@ st.dataframe(
 
 st.write(
     """
-The rules-based approach was by far the fastest and required no
-LLM tokens, but it achieved only 53.3% policy accuracy in the
-15-question benchmark and returned an unsupported answer for all
-three questions that were not covered by the policy database.
-The LLM without a vector index achieved 100% policy accuracy and
-a 0% unsupported-answer rate, but it processed an average of
-2,886.4 input tokens per question because the complete policy
-database was included in every prompt.
+The rules-based approach was by far the fastest and required no LLM tokens, but it achieved only 53.3% policy accuracy in the 15-question benchmark and returned an unsupported answer for all three questions that were not covered by the policy database. The LLM without a vector index achieved 100% policy accuracy and a 0% unsupported-answer rate on these test questions, but it processed an average of 2,886.4 input tokens per question because the complete policy database was included in every prompt.
 """
 )
 
 st.write(
     """
-The LLM with a vector index also achieved 100% policy accuracy
-and a 0% unsupported-answer rate while reducing average input
-token use to 223.3 tokens, approximately 92% less than the LLM
-without a vector index. Although its average response time was
-higher in this benchmark, the vector-index approach is preferred
-because it retained the accuracy and grounded behaviour of the
-full-context LLM while substantially reducing the amount of
-policy context sent to the model.
+The LLM with a vector index also achieved 100% policy accuracy and a 0% unsupported-answer rate in the benchmark, while reducing average input token use for answer generation to 223.3 tokens, approximately 92% less than the LLM without a vector index. However, this comparison excludes the additional token usage associated with generating query embeddings. Although the vector-index approach had a higher average response time in this benchmark (14.210 seconds compared with 10.066 seconds), it is preferred because it maintained the same measured accuracy and avoided unsupported answers in the tested cases, while substantially reducing the amount of policy context sent to the LLM.
 """
 )
